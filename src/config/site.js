@@ -18,12 +18,15 @@ export const site = {
   },
 
   url: 'https://devamir.com',
+  projects: 'https://devamir.com/en/projects',
+  contactPage: 'https://devamir.com/en/contact',
   email: 'devamir99@gmail.com',
   phone: '09205007494',
 
   social: {
-    github: 'https://github.com/devamirr',
-    linkedin: 'https://linkedin.com/in/devamir',
+    github: 'https://github.com/devamir99',
+    linkedin: 'https://www.linkedin.com/in/devamir/',
+    instagram: 'https://www.instagram.com/devamirr',
     telegram: 'https://t.me/devamir99',
   },
 
@@ -31,12 +34,12 @@ export const site = {
 
   cta: {
     portfolio: {
-      en: 'View Portfolio',
-      fa: 'مشاهده نمونه‌کارها',
+      en: 'View Projects',
+      fa: 'نمونه‌کارها',
     },
     contact: {
-      en: 'Get in Touch',
-      fa: 'تماس با من',
+      en: 'Request Consultation',
+      fa: 'درخواست مشاوره',
     },
     explore: {
       en: 'Explore Auth Flows',
@@ -46,10 +49,52 @@ export const site = {
 };
 
 export const contactLinks = [
-  { id: 'portfolio', label: { en: 'Website', fa: 'وب‌سایت' }, href: site.url, external: true },
-  { id: 'email', label: { en: 'Email', fa: 'ایمیل' }, href: `mailto:${site.email}`, external: false },
-  { id: 'telegram', label: { en: 'Telegram', fa: 'تلگرام' }, href: site.social.telegram, external: true },
-  { id: 'linkedin', label: { en: 'LinkedIn', fa: 'لینکدین' }, href: site.social.linkedin, external: true },
-  { id: 'github', label: { en: 'GitHub', fa: 'گیت‌هاب' }, href: site.social.github, external: true },
-  { id: 'phone', label: { en: 'Phone', fa: 'تلفن' }, href: `tel:+98${site.phone.replace(/^0/, '')}`, external: false },
+  {
+    id: 'projects',
+    label: { en: 'Projects', fa: 'نمونه‌کارها' },
+    href: site.projects,
+    external: true,
+  },
+  {
+    id: 'contact',
+    label: { en: 'Consultation', fa: 'درخواست مشاوره' },
+    href: site.contactPage,
+    external: true,
+  },
+  {
+    id: 'email',
+    label: { en: 'Email', fa: 'ایمیل' },
+    href: `mailto:${site.email}`,
+    external: false,
+  },
+  {
+    id: 'telegram',
+    label: { en: 'Telegram', fa: 'تلگرام' },
+    href: site.social.telegram,
+    external: true,
+  },
+  {
+    id: 'linkedin',
+    label: { en: 'LinkedIn', fa: 'لینکدین' },
+    href: site.social.linkedin,
+    external: true,
+  },
+  {
+    id: 'instagram',
+    label: { en: 'Instagram', fa: 'اینستاگرام' },
+    href: site.social.instagram,
+    external: true,
+  },
+  {
+    id: 'github',
+    label: { en: 'GitHub', fa: 'گیت‌هاب' },
+    href: site.social.github,
+    external: true,
+  },
+  {
+    id: 'phone',
+    label: { en: 'Phone', fa: 'تلفن' },
+    href: `tel:+98${site.phone.replace(/^0/, '')}`,
+    external: false,
+  },
 ];
