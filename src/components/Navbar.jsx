@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useLanguage } from '../context/LanguageContext';
+import { site } from '../config/site';
+import ThemeToggle from './ThemeToggle';
+import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
   const { isAuthenticated, user, logout } = useAuth();
+  const { t } = useLanguage();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -12,52 +17,76 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white/10 backdrop-blur-lg shadow-lg border-b border-white/20">
+    <nav className="surface-nav border-b sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link 
-              to="/" 
-              className="text-xl font-bold text-white hover:text-blue-300"
-            >
-              AuthLab React
+        <div className="flex justify-between items-center h-16 gap-4">
+          <div className="flex items-center gap-3 min-w-0">
+            <Link to="/" className="text-xl font-bold text-app hover:text-primary transition-colors truncate">
+              {site.name}
             </Link>
+            <a
+              href={site.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline text-xs text-app-muted hover:text-primary transition-colors truncate"
+            >
+              {site.brand}
+            </a>
           </div>
 
-          {/* Navigation Links */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <a
+              href={site.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline text-sm text-app-muted hover:text-primary px-2 py-1 transition-colors"
+            >
+              {t('nav.portfolio')}
+            </a>
+            <a
+              href={site.social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline text-sm text-app-muted hover:text-primary px-2 py-1 transition-colors"
+            >
+              {t('nav.github')}
+            </a>
+
+            <LanguageToggle />
+            <ThemeToggle />
+
             {isAuthenticated ? (
               <>
-                <span className="text-gray-300">
-                  Welcome, {user?.name}
+                <span className="hidden lg:inline text-sm text-app-muted max-w-[140px] truncate">
+                  {t('nav.welcome', { name: user?.name ?? '' })}
                 </span>
                 <Link
                   to="/dashboard"
-                  className="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-sm text-app-muted hover:text-primary px-2 py-1 transition-colors"
                 >
-                  Dashboard
+                  {t('nav.dashboard')}
                 </Link>
                 <button
+                  type="button"
                   onClick={handleLogout}
-                  className="bg-red-600/80 hover:bg-red-700/80 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors backdrop-blur-sm"
+                  className="text-sm px-3 py-1.5 rounded-lg border border-[var(--color-danger)] text-[var(--color-danger)] hover:bg-[var(--color-danger-bg)] transition-colors"
                 >
-                  Logout
+                  {t('nav.logout')}
                 </button>
               </>
             ) : (
               <>
                 <Link
                   to="/login"
-                  className="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-sm text-app-muted hover:text-primary px-2 py-1 transition-colors"
                 >
-                  Sign In
+                  {t('nav.login')}
                 </Link>
                 <Link
                   to="/register"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors backdrop-blur-sm"
+                  className="text-sm px-3 py-1.5 rounded-lg btn-primary font-medium transition-colors"
                 >
-                  Sign Up
+                  {t('nav.register')}
                 </Link>
               </>
             )}
