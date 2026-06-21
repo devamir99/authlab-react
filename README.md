@@ -100,7 +100,7 @@ npm run lint     # ESLint
 | Phase | Scope |
 |-------|--------|
 | **0** ✅ | Site config, folder structure, README |
-| **1** | Theme (dark/light), i18n, layout, Navbar, Footer |
+| **1** ✅ | Theme (dark/light), i18n, layout, Navbar, Footer |
 | **2** | Home + Auth Hub |
 | **3** | Email login & register (mock) |
 | **4** | Social OAuth screens (mock) |
