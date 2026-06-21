@@ -94,9 +94,7 @@
       "desc": "Passwordless sign-in via email link.",
       "providers": "Enter email · Check inbox",
       "pageTitle": "Passwordless Email",
-      "pageSubtitle": "Receive a mock magic link — no password required.",
-      "comingPhase": "Full magic link flow coming in Phase 6.",
-      "startFlow": "Start Magic Link Flow"
+      "pageSubtitle": "Receive a mock magic link — no password required."
     },
     "providerStub": {
       "redirecting": "Simulating redirect to {{provider}}…",
@@ -205,6 +203,37 @@
       "invalidOtp": "Invalid verification code",
       "otpExpired": "Code expired — request a new one",
       "sessionExpired": "Session expired — enter your phone again",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "magicLink": {
+    "steps": {
+      "email": "Enter email",
+      "inbox": "Check inbox"
+    },
+    "enterTitle": "Sign in with magic link",
+    "enterSubtitle": "Enter your email and we'll send a secure sign-in link (mock).",
+    "email": "Email address",
+    "sendLink": "Send magic link",
+    "demoHint": "Mock email — no real message is sent",
+    "sentTitle": "Check your inbox",
+    "sentSubtitle": "We sent a sign-in link to",
+    "sentHint": "Open the email and click the link — or use the button below to simulate it in this demo.",
+    "simulateClick": "Simulate link click",
+    "verifying": "Verifying link…",
+    "resend": "Resend magic link",
+    "resending": "Sending…",
+    "resendIn": "Resend in {{seconds}}s",
+    "changeEmail": "Use a different email",
+    "tryAgain": "Try again",
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email format"
+    },
+    "errors": {
+      "invalidLink": "Invalid or expired magic link",
+      "linkExpired": "Link expired — request a new one",
+      "sessionExpired": "Session expired — enter your email again",
       "generic": "Something went wrong. Please try again."
     }
   }
