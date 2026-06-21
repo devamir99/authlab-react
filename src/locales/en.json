@@ -46,9 +46,9 @@
     "register": "Sign Up"
   },
   "home": {
-    "heroTitle": "Auth Experience Lab",
+    "heroTitle": "Auth, Login & Sign Up Demo",
     "heroSubtitle": "Explore bilingual mock sign-in flows — email, social, SMS, and passwordless. No backend, UI showcase only.",
-    "exploreCta": "Explore Auth Flows",
+    "exploreCta": "View Demos",
     "portfolioCta": "View Projects",
     "githubCta": "View on GitHub",
     "welcomeBack": "Welcome back, {{name}}",
