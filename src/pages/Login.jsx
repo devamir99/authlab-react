@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import { authAPI } from '../api/auth';
 import FormInput from '../components/FormInput';
 import Loader from '../components/Loader';
+import Breadcrumb from '../components/Breadcrumb';
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -61,6 +62,14 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
+        <Breadcrumb
+          items={[
+            { labelKey: 'breadcrumb.home', to: '/' },
+            { labelKey: 'breadcrumb.authHub', to: '/auth' },
+            { labelKey: 'breadcrumb.email', to: '/auth/email' },
+            { labelKey: 'breadcrumb.login' },
+          ]}
+        />
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
             Sign In to Account
@@ -68,8 +77,8 @@ const Login = () => {
           <p className="mt-2 text-center text-sm text-gray-300">
             or{' '}
             <Link
-              to="/register"
-              className="font-medium text-blue-400 hover:text-blue-300"
+              to="/auth/email/register"
+              className="font-medium text-primary hover:underline"
             >
               create new account
             </Link>
