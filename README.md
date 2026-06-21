@@ -1,208 +1,118 @@
 # AuthLab React
 
-A modern and complete authentication system with React that includes registration, login, session management and route protection with a beautiful dark glassmorphism design.
+[![Portfolio](https://img.shields.io/badge/Portfolio-devamir.com-orange?style=flat-square)](https://devamir.com)
+[![Author](https://img.shields.io/badge/Author-DevAmir-blue?style=flat-square)](https://github.com/devamirr)
 
-## 🚀 Features
+**Auth Experience Lab** — a bilingual (EN/FA) mock authentication UI showcase built with React.  
+Explore email, social OAuth, SMS OTP, and passwordless flows — **no backend, demonstration only**.
 
-### Core Features
-- ✅ **Protected Routes**: Protection of sensitive pages with React Router
-- ✅ **Auth Context**: User state management with Context API
-- ✅ **Form Validation**: Form validation with Yup and Formik
-- ✅ **Mock API**: Simulated API with json-server
-- ✅ **LocalStorage**: Session persistence after page refresh
-- ✅ **Responsive Design**: Responsive design with Tailwind CSS
-- ✅ **Dark Glassmorphism UI**: Modern dark theme with glassmorphism effects
+> Built by [Amir (DevAmir)](https://devamir.com) as a portfolio piece.
 
-### UX Features
-- ✅ **Loading States**: Loading state display
-- ✅ **Error Handling**: Error management and appropriate message display
-- ✅ **Toast Notifications**: Success and error message display
-- ✅ **Remember Me**: User remember functionality
+## Author — Amir (DevAmir)
 
-## 🛠️ Technologies
+| | |
+|---|---|
+| **Website** | [devamir.com](https://devamir.com) |
+| **Email** | [devamir99@gmail.com](mailto:devamir99@gmail.com) |
+| **GitHub** | [github.com/devamirr](https://github.com/devamirr) |
+| **LinkedIn** | [linkedin.com/in/devamir](https://linkedin.com/in/devamir) |
+| **Telegram** | [t.me/devamir99](https://t.me/devamir99) |
+| **Phone** | [09205007494](tel:+989205007494) |
 
-- **React 19** - Main library
-- **React Router DOM** - Routing management and protected routes
-- **Axios** - API communication
-- **Formik + Yup** - Form management and validation
-- **Tailwind CSS** - UI design with glassmorphism
-- **Context API** - State management
-- **json-server** - Mock API
+Interested in custom auth UI or full-stack work? **[Get in touch →](https://devamir.com)**
 
-## 📁 Project Structure
+## Features (planned & in progress)
+
+- **Auth Hub** — choose sign-in method without cluttered single-page forms
+- **Email** — login & register (client-side mock)
+- **Social** — Google, GitHub, Apple, Microsoft (mock OAuth screens)
+- **Phone** — SMS OTP two-step flow (mock)
+- **Magic Link** — passwordless email flow (mock)
+- **Bilingual** — English & Persian with RTL support
+- **Theming** — dark / light mode with orange accent
+- **Protected routes** — demo dashboard after mock login
+
+## Tech Stack
+
+- React 19 · Vite · React Router
+- Tailwind CSS 4
+- Formik + Yup (forms)
+- Context API (state)
+
+## Project Structure
 
 ```
 src/
-├── api/
-│   └── auth.js              # API functions for authentication
-├── components/
-│   ├── FormInput.jsx        # Input component with validation
-│   ├── Loader.jsx           # Loading component
-│   ├── Navbar.jsx           # Navigation bar
-│   └── Toast.jsx            # Message display component
+├── config/
+│   └── site.js              # Author info, links, CTA copy
+├── locales/
+│   ├── en.json
+│   └── fa.json
+├── layouts/                 # MainLayout (Phase 1)
 ├── context/
-│   └── AuthContext.jsx      # User state management
+│   └── AuthContext.jsx
+├── components/
 ├── pages/
-│   ├── Home.jsx             # Home page
-│   ├── Login.jsx            # Login page
-│   ├── Register.jsx         # Registration page
-│   └── Dashboard.jsx        # User dashboard
+│   ├── Home.jsx
+│   ├── Dashboard.jsx
+│   └── auth/
+│       ├── email/           # Login & register flows
+│       ├── social/          # OAuth provider screens
+│       ├── phone/           # SMS OTP wizard
+│       └── magic-link/      # Passwordless email
 ├── routes/
-│   └── ProtectedRoute.jsx   # Route protection
-├── App.jsx                  # Main component
-└── main.jsx                 # Application entry point
+│   └── ProtectedRoute.jsx
+├── App.jsx
+└── main.jsx
 ```
 
-## 🚀 Setup
+## Setup
 
 ### Prerequisites
-- Node.js (version 18 or higher)
+
+- Node.js 18+
 - npm or yarn
 
-### Installation and Setup
+### Install & run
 
-1. **Clone the project**
 ```bash
-git clone <repository-url>
+git clone https://github.com/devamir99/authlab-react.git
 cd authlab-react
-```
-
-2. **Install dependencies**
-```bash
 npm install
-```
-
-3. **Start Mock API**
-```bash
-npm run api
-```
-
-4. **Start React application**
-```bash
 npm run dev
 ```
 
-5. **Access the application**
-- React App: http://localhost:5173
-- Mock API: http://localhost:3001
+Open [http://localhost:5173](http://localhost:5173).
 
-## 📱 Application Pages
+> **No API server required.** All authentication is simulated on the client for UI demonstration.
 
-### 🏠 Home Page
-- Welcome and project introduction
-- Login and registration links
-- Project features display
-
-### 🔐 Login Page
-- Login form with email and password
-- Validation with Yup
-- "Remember me" functionality
-- Error handling
-
-### 📝 Registration Page
-- Registration form with complete fields
-- Password confirmation
-- Advanced validation
-- Auto-login after registration
-
-### 🎛️ Dashboard
-- Protected page
-- User information display
-- Quick actions
-- Logout button
-
-## 🔧 API Endpoints
-
-### Mock API (json-server)
-
-#### Get users list
-```http
-GET http://localhost:3001/users
-```
-
-#### Register new user
-```http
-POST http://localhost:3001/users
-Content-Type: application/json
-
-{
-  "name": "User Name",
-  "email": "user@example.com",
-  "password": "password123"
-}
-```
-
-## 🎯 User Flow
-
-1. **Enter home page** → Choose Login or Register
-2. **Registration** → Fill form → Confirm → Auto-login to Dashboard
-3. **Login** → Fill form → Confirm → Enter Dashboard
-4. **Dashboard** → View information → Logout
-
-## 🔒 Security
-
-- Protection of sensitive routes
-- Form validation
-- Session management with LocalStorage
-- API error handling
-
-## 🎨 Design Features
-
-- **Dark Theme**: Modern dark color scheme
-- **Glassmorphism**: Frosted glass effects with backdrop blur
-- **Gradients**: Beautiful gradient backgrounds
-- **Transparency**: Semi-transparent elements
-- **Modern UI**: Clean and contemporary design
-
-## 🚀 Future Development
-
-- [ ] Connect to real Backend (Laravel/Node.js)
-- [ ] Password change functionality
-- [ ] Forgot password
-- [ ] Two-factor authentication
-- [ ] Advanced user profile
-- [ ] Role and permission system
-
-## 📝 Scripts
+## Scripts
 
 ```bash
-npm run dev      # Start development server
-npm run build    # Build production build
+npm run dev      # Development server
+npm run build    # Production build
 npm run preview  # Preview production build
-npm run api      # Start Mock API
-npm run lint     # Check code with ESLint
+npm run lint     # ESLint
 ```
 
-## 🤝 Contributing
+## Roadmap
 
-To contribute to this project:
+| Phase | Scope |
+|-------|--------|
+| **0** ✅ | Site config, folder structure, README |
+| **1** | Theme (dark/light), i18n, layout, Navbar, Footer |
+| **2** | Home + Auth Hub |
+| **3** | Email login & register (mock) |
+| **4** | Social OAuth screens (mock) |
+| **5** | Phone OTP flow (mock) |
+| **6** | Magic link flow (mock) |
+| **7** | Dashboard polish + deploy |
+| **8** | README GIF, live demo, case study |
 
-1. Fork it
-2. Create a new branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Create a Pull Request
+## License
 
-## 📄 License
-
-This project is published under the MIT license.
-
-## 👨‍💻 Developer
-
-This project has been developed as a complete example of an authentication system with React and modern UI design.
+MIT — see [LICENSE](LICENSE).
 
 ---
 
-**Note**: This project is designed for educational and practice purposes. For production use, be sure to add more security and validation features.
-
-## 🌟 Demo Users
-
-You can test the application with these demo users:
-
-1. **Test User**
-   - Email: `test@example.com`
-   - Password: `123456`
-
-2. **Dev Amir**
-   - Email: `devamir99@example.com`
-   - Password: `123456`
+**Note:** This is a **UI showcase only**. Do not use mock flows or client-only session logic in production without a real backend, secure tokens, and proper validation.
