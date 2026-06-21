@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { IconCheck } from './icons';
 
 const Stepper = ({ steps, currentStep }) => {
   const { t } = useLanguage();
@@ -33,7 +34,7 @@ const Stepper = ({ steps, currentStep }) => {
                   }`}
                   aria-current={isActive ? 'step' : undefined}
                 >
-                  {isComplete ? '✓' : stepNum}
+                  {isComplete ? <IconCheck className="w-4 h-4" /> : stepNum}
                 </span>
                 <span
                   className={`text-xs sm:text-sm font-medium hidden sm:block ${

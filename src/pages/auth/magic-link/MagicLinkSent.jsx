@@ -13,6 +13,7 @@ import {
 import Breadcrumb from '../../../components/Breadcrumb';
 import Stepper from '../../../components/Stepper';
 import Loader from '../../../components/Loader';
+import FlowIcon from '../../../components/icons';
 
 const magicSteps = [
   { key: 'email', labelKey: 'magicLink.steps.email' },
@@ -109,15 +110,15 @@ const MagicLinkSent = () => {
         <Stepper steps={magicSteps} currentStep={2} />
 
         <div className="surface rounded-2xl p-6 md:p-8 backdrop-blur-lg text-center">
-          <div
-            className={`w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center text-4xl transition-opacity duration-700 ${
+          <FlowIcon
+            name="inbox"
+            box
+            boxClassName={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-[var(--color-primary-soft)] text-primary flex items-center justify-center transition-opacity duration-700 ${
               pulse ? 'opacity-100' : 'opacity-60'
             }`}
-            style={{ background: 'var(--color-primary-soft)' }}
+            className="w-10 h-10"
             aria-hidden
-          >
-            📬
-          </div>
+          />
 
           <h1 className="text-xl md:text-2xl font-bold text-app mb-2">
             {t('magicLink.sentTitle')}

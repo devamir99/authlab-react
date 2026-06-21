@@ -1,4 +1,12 @@
 import React from 'react';
+import { IconCheck, IconX, IconAlert, IconInfo } from './icons';
+
+const toastIcons = {
+  success: IconCheck,
+  error: IconX,
+  warning: IconAlert,
+  info: IconInfo,
+};
 
 const Toast = ({ message, type = 'info', onClose, position = 'right' }) => {
   const styles = {
@@ -24,9 +32,9 @@ const Toast = ({ message, type = 'info', onClose, position = 'right' }) => {
     },
   };
 
-  const icons = { success: '✓', error: '✕', warning: '⚠', info: 'ℹ' };
   const style = styles[type] ?? styles.info;
   const horizontal = position === 'left' ? 'left-4' : 'right-4';
+  const Icon = toastIcons[type] ?? IconInfo;
 
   return (
     <div
@@ -43,9 +51,7 @@ const Toast = ({ message, type = 'info', onClose, position = 'right' }) => {
         }}
       >
         <div className="flex items-start gap-3">
-          <span className="font-bold text-base shrink-0" aria-hidden>
-            {icons[type]}
-          </span>
+          <Icon className="w-5 h-5 shrink-0 mt-0.5" aria-hidden />
           <p className="text-sm font-medium flex-1 leading-relaxed">{message}</p>
           <button
             type="button"
@@ -53,13 +59,7 @@ const Toast = ({ message, type = 'info', onClose, position = 'right' }) => {
             className="shrink-0 opacity-60 hover:opacity-100 transition-opacity"
             aria-label="Close"
           >
-            <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <IconX className="h-4 w-4" />
           </button>
         </div>
       </div>

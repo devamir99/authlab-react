@@ -5,19 +5,13 @@ import { useLanguage } from '../context/LanguageContext';
 import { useToast } from '../context/ToastContext';
 import { site } from '../config/site';
 import { authFlowCategories } from '../config/authFlows';
+import FlowIcon from '../components/icons';
 
 const methodLabels = {
   email: { en: 'Email & Password', fa: 'ایمیل و رمز عبور' },
   social: { en: 'Social OAuth', fa: 'ورود اجتماعی' },
   phone: { en: 'Phone OTP', fa: 'پیامک OTP' },
   'magic-link': { en: 'Magic Link', fa: 'لینک جادویی' },
-};
-
-const methodIcons = {
-  email: '✉️',
-  social: '🌐',
-  phone: '📱',
-  'magic-link': '🔗',
 };
 
 const Dashboard = () => {
@@ -66,13 +60,14 @@ const Dashboard = () => {
             </h1>
             <p className="text-app-muted">{t('dashboard.subtitle')}</p>
           </div>
-          <span
-            className="text-3xl shrink-0"
+          <FlowIcon
+            name={authMethod ?? 'lock'}
+            box
+            boxClassName="w-12 h-12 rounded-xl bg-[var(--color-primary-soft)] text-primary flex items-center justify-center shrink-0"
+            className="w-6 h-6"
             aria-hidden
             title={methodLabel}
-          >
-            {methodIcons[authMethod] ?? '🔐'}
-          </span>
+          />
         </div>
       </div>
 
@@ -138,7 +133,7 @@ const Dashboard = () => {
               to={flow.route}
               className="surface rounded-xl p-3 text-center hover:border-[var(--color-border-strong)] transition-colors group"
             >
-              <span className="text-2xl block mb-1" aria-hidden>{flow.icon}</span>
+              <FlowIcon name={flow.icon} className="w-6 h-6 text-primary mx-auto mb-1" aria-hidden />
               <span className="text-xs font-medium text-app-muted group-hover:text-primary transition-colors">
                 {t(flow.titleKey)}
               </span>

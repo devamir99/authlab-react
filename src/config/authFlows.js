@@ -3,7 +3,7 @@ export { socialProviders } from './socialProviders.js';
 export const authFlowCategories = [
   {
     id: 'social',
-    icon: '🌐',
+    icon: 'social',
     route: '/auth/social',
     titleKey: 'authHub.social.title',
     descKey: 'authHub.social.desc',
@@ -11,7 +11,7 @@ export const authFlowCategories = [
   },
   {
     id: 'email',
-    icon: '✉️',
+    icon: 'email',
     route: '/auth/email',
     titleKey: 'authHub.email.title',
     descKey: 'authHub.email.desc',
@@ -19,7 +19,7 @@ export const authFlowCategories = [
   },
   {
     id: 'phone',
-    icon: '📱',
+    icon: 'phone',
     route: '/auth/phone',
     titleKey: 'authHub.phone.title',
     descKey: 'authHub.phone.desc',
@@ -27,7 +27,7 @@ export const authFlowCategories = [
   },
   {
     id: 'magic-link',
-    icon: '🔗',
+    icon: 'magic-link',
     route: '/auth/magic-link',
     titleKey: 'authHub.magicLink.title',
     descKey: 'authHub.magicLink.desc',

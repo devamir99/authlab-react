@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../../context/LanguageContext';
 import Breadcrumb from '../../../components/Breadcrumb';
+import FlowIcon from '../../../components/icons';
 
 const EmailHub = () => {
   const { t } = useLanguage();
@@ -14,13 +15,13 @@ const EmailHub = () => {
 
   const options = [
     {
-      icon: '🔑',
+      icon: 'key',
       titleKey: 'breadcrumb.login',
       descKey: 'authHub.email.pageSubtitle',
       to: '/auth/email/login',
     },
     {
-      icon: '📝',
+      icon: 'pen',
       titleKey: 'breadcrumb.register',
       descKey: 'authHub.email.pageSubtitle',
       to: '/auth/email/register',
@@ -46,13 +47,16 @@ const EmailHub = () => {
               to={opt.to}
               className="group flex items-center gap-4 surface rounded-xl p-5 backdrop-blur-lg transition-all hover:border-[var(--color-border-strong)]"
             >
-              <span className="text-2xl" aria-hidden>{opt.icon}</span>
+              <FlowIcon name={opt.icon} box className="w-5 h-5" />
               <div className="flex-1">
                 <p className="font-semibold text-app group-hover:text-primary transition-colors">
                   {t(opt.titleKey)}
                 </p>
               </div>
-              <span className="text-primary text-sm font-medium">→</span>
+              <FlowIcon
+                name="arrow-right"
+                className="w-4 h-4 text-primary rtl:rotate-180 transition-transform group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5"
+              />
             </Link>
           ))}
         </div>

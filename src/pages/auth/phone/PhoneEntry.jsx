@@ -7,10 +7,11 @@ import { sendOtp, formatPhoneDisplay } from '../../../services/mockPhoneAuth';
 import Breadcrumb from '../../../components/Breadcrumb';
 import Stepper from '../../../components/Stepper';
 import Loader from '../../../components/Loader';
+import FlowIcon from '../../../components/icons';
 
 const countryCodes = [
-  { code: '+98', label: '🇮🇷 +98', placeholder: '912 345 6789' },
-  { code: '+1', label: '🇺🇸 +1', placeholder: '555 123 4567' },
+  { code: '+98', label: 'IR +98', placeholder: '912 345 6789' },
+  { code: '+1', label: 'US +1', placeholder: '555 123 4567' },
 ];
 
 const phoneSteps = [
@@ -64,7 +65,13 @@ const PhoneEntry = () => {
 
         <div className="surface rounded-2xl p-6 md:p-8 backdrop-blur-lg">
           <header className="text-center mb-6">
-            <span className="text-3xl mb-3 block" aria-hidden>📱</span>
+            <FlowIcon
+              name="phone"
+              box
+              boxClassName="w-14 h-14 rounded-2xl bg-[var(--color-primary-soft)] text-primary flex items-center justify-center mx-auto mb-3"
+              className="w-7 h-7"
+              aria-hidden
+            />
             <h1 className="text-xl md:text-2xl font-bold text-app mb-2">
               {t('phoneOtp.enterTitle')}
             </h1>

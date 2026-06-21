@@ -5,21 +5,21 @@ import { useLanguage } from '../context/LanguageContext';
 import { site } from '../config/site';
 import { authFlowCategories, techStack } from '../config/authFlows';
 import AuthHubCard from '../components/AuthHubCard';
+import FlowIcon from '../components/icons';
 
 const Home = () => {
   const { isAuthenticated, user } = useAuth();
   const { t } = useLanguage();
 
   const features = [
-    { icon: '🧩', titleKey: 'home.feature1Title', descKey: 'home.feature1Desc' },
-    { icon: '🌍', titleKey: 'home.feature2Title', descKey: 'home.feature2Desc' },
-    { icon: '🎨', titleKey: 'home.feature3Title', descKey: 'home.feature3Desc' },
+    { icon: 'puzzle', titleKey: 'home.feature1Title', descKey: 'home.feature1Desc' },
+    { icon: 'globe', titleKey: 'home.feature2Title', descKey: 'home.feature2Desc' },
+    { icon: 'palette', titleKey: 'home.feature3Title', descKey: 'home.feature3Desc' },
   ];
 
   return (
     <div className="py-12 md:py-20">
       <div className="max-w-5xl mx-auto px-4">
-        {/* Hero */}
         <section className="text-center mb-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">
             {site.brand}
@@ -70,18 +70,16 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Features */}
         <section className="grid md:grid-cols-3 gap-6 mb-16">
           {features.map((f) => (
             <div key={f.titleKey} className="surface rounded-2xl p-6 backdrop-blur-lg">
-              <span className="text-2xl mb-3 block" aria-hidden>{f.icon}</span>
+              <FlowIcon name={f.icon} box boxClassName="w-11 h-11 rounded-xl bg-[var(--color-primary-soft)] text-primary flex items-center justify-center mb-3" className="w-5 h-5" />
               <h2 className="font-semibold text-app mb-2">{t(f.titleKey)}</h2>
               <p className="text-sm text-app-muted leading-relaxed">{t(f.descKey)}</p>
             </div>
           ))}
         </section>
 
-        {/* Flow preview */}
         <section className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-app mb-2">{t('home.flowsTitle')}</h2>
@@ -101,7 +99,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Tech stack */}
         <section className="text-center">
           <h2 className="text-xl font-semibold text-app mb-6">{t('home.techTitle')}</h2>
           <div className="flex flex-wrap justify-center gap-3">

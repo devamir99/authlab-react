@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { IconChevronRight } from './icons';
 
 const Breadcrumb = ({ items }) => {
   const { t } = useLanguage();
@@ -15,9 +16,10 @@ const Breadcrumb = ({ items }) => {
           return (
             <li key={item.labelKey ?? item.label ?? index} className="flex items-center gap-1.5">
               {index > 0 && (
-                <span aria-hidden className="text-app-muted/60 select-none">
-                  ›
-                </span>
+                <IconChevronRight
+                  className="w-3.5 h-3.5 text-app-muted/60 shrink-0 rtl:rotate-180"
+                  aria-hidden
+                />
               )}
               {isLast || !item.to ? (
                 <span className="text-primary font-medium" aria-current="page">

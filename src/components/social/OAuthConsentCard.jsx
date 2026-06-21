@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import { getSocialProvider } from '../../config/socialProviders';
 import SocialProviderIcon from './SocialProviderIcon';
+import { IconCheck } from '../icons';
 
 const cardThemes = {
   google: {
@@ -103,7 +104,7 @@ const OAuthConsentCard = ({ provider, onAuthorize, onCancel, loading }) => {
           <ul className="space-y-2">
             {scopes.map((scope) => (
               <li key={scope} className={`flex items-center gap-2 text-sm ${theme.muted}`}>
-                <span aria-hidden className="text-green-500">✓</span>
+                <IconCheck className="w-4 h-4 text-green-500 shrink-0" aria-hidden />
                 {scope}
               </li>
             ))}
