@@ -1,0 +1,8 @@
+{
+  "meta": {
+    "title": "AuthLab — Mock Auth UI"
+  },
+  "demo": {
+    "banner": "Demo only — no real authentication"
+  }
+}
