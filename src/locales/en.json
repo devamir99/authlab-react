@@ -169,11 +169,26 @@
     "loading": "Loading dashboard…",
     "title": "User Dashboard",
     "subtitle": "Mock session overview",
+    "mockSession": "Mock Session",
     "authMethod": "Sign-in method",
     "userInfo": "User Information",
+    "sessionId": "Session ID",
+    "loginTime": "Signed in at",
     "status": "Status",
     "active": "Active",
+    "exploreFlows": "Try other flows",
+    "portfolioPitch": "Like this UI? See more work or get in touch for your next project.",
+    "backHome": "Back to Home",
     "logout": "Logout from Account"
+  },
+  "toast": {
+    "welcome": "Welcome, {{name}}! Mock session started.",
+    "logout": "You have been signed out."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "The page you're looking for doesn't exist or has been moved.",
+    "home": "Go to Home"
   },
   "phoneOtp": {
     "steps": {
