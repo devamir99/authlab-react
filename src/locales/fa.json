@@ -104,8 +104,37 @@
       "redirecting": "شبیه‌سازی انتقال به {{provider}}…",
       "continue": "ادامه با {{provider}}",
       "back": "بازگشت به ارائه‌دهندگان",
-      "phaseNote": "صفحه mock OAuth کامل — فاز ۴"
+      "phaseNote": "صفحه OAuth برندشده"
     }
+  },
+  "socialOAuth": {
+    "providers": {
+      "google": "Google",
+      "github": "GitHub",
+      "apple": "Apple",
+      "microsoft": "Microsoft"
+    },
+    "hubDesc": {
+      "google": "ورود با حساب Google",
+      "github": "مجوزدهی از طریق GitHub",
+      "apple": "ورود با Apple ID",
+      "microsoft": "ورود با حساب Microsoft"
+    },
+    "signInWith": "ورود با",
+    "consentIntro": "{{provider}} می‌خواهد به حساب شما در {{app}} دسترسی داشته باشد",
+    "permissionsTitle": "این برنامه می‌تواند",
+    "scopes": {
+      "profile": "اطلاعات پروفایل پایه را ببیند",
+      "email": "آدرس ایمیل شما را ببیند"
+    },
+    "authorize": "ادامه با {{provider}}",
+    "authorizing": "در حال مجوزدهی…",
+    "cancel": "لغو و بازگشت",
+    "redirecting": "در حال انتقال به {{provider}}…",
+    "redirectHint": "شبیه‌سازی OAuth — لطفاً صبر کنید",
+    "mockNote": "صفحه mock OAuth — هیچ داده واقعی به اشتراک گذاشته نمی‌شود",
+    "notFound": "ارائه‌دهنده یافت نشد",
+    "backToProviders": "بازگشت به ارائه‌دهندگان"
   },
   "emailForm": {
     "loginTitle": "ورود به حساب",

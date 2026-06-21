@@ -104,8 +104,37 @@
       "redirecting": "Simulating redirect to {{provider}}…",
       "continue": "Continue with {{provider}}",
       "back": "Back to providers",
-      "phaseNote": "Full OAuth mock screen — Phase 4"
+      "phaseNote": "Branded OAuth consent screen"
     }
+  },
+  "socialOAuth": {
+    "providers": {
+      "google": "Google",
+      "github": "GitHub",
+      "apple": "Apple",
+      "microsoft": "Microsoft"
+    },
+    "hubDesc": {
+      "google": "Sign in with your Google account",
+      "github": "Authorize with GitHub",
+      "apple": "Sign in with Apple ID",
+      "microsoft": "Sign in with Microsoft account"
+    },
+    "signInWith": "Sign in with",
+    "consentIntro": "{{provider}} wants to access your account on {{app}}",
+    "permissionsTitle": "This app will be able to",
+    "scopes": {
+      "profile": "View your basic profile info",
+      "email": "View your email address"
+    },
+    "authorize": "Continue with {{provider}}",
+    "authorizing": "Authorizing…",
+    "cancel": "Cancel and go back",
+    "redirecting": "Redirecting to {{provider}}…",
+    "redirectHint": "Simulating OAuth redirect — please wait",
+    "mockNote": "Mock OAuth screen — no real data is shared",
+    "notFound": "Provider not found",
+    "backToProviders": "Back to providers"
   },
   "emailForm": {
     "loginTitle": "Sign In to Account",
