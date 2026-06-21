@@ -106,5 +106,48 @@
       "back": "بازگشت به ارائه‌دهندگان",
       "phaseNote": "صفحه mock OAuth کامل — فاز ۴"
     }
+  },
+  "emailForm": {
+    "loginTitle": "ورود به حساب",
+    "registerTitle": "ایجاد حساب جدید",
+    "loginSubtitle": "یا {{link}}",
+    "registerSubtitle": "یا {{link}}",
+    "createAccount": "حساب جدید بسازید",
+    "signInExisting": "وارد حساب موجود شوید",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "name": "نام کامل",
+    "confirmPassword": "تکرار رمز عبور",
+    "rememberMe": "مرا به خاطر بسپار",
+    "submitLogin": "ورود",
+    "submitRegister": "ثبت‌نام",
+    "backHome": "بازگشت به خانه",
+    "demoHint": "حساب demo: demo@authlab.dev / 123456",
+    "registerSuccess": "حساب با موفقیت ساخته شد! در حال انتقال…",
+    "validation": {
+      "emailRequired": "ایمیل الزامی است",
+      "emailInvalid": "فرمت ایمیل نامعتبر است",
+      "passwordRequired": "رمز عبور الزامی است",
+      "passwordMin": "رمز عبور باید حداقل ۶ کاراکتر باشد",
+      "nameRequired": "نام الزامی است",
+      "nameMin": "نام باید حداقل ۲ کاراکتر باشد",
+      "confirmRequired": "تکرار رمز عبور الزامی است",
+      "passwordMismatch": "رمز عبور و تکرار آن یکسان نیستند"
+    },
+    "errors": {
+      "invalidCredentials": "ایمیل یا رمز عبور اشتباه است",
+      "emailExists": "این ایمیل قبلاً ثبت شده است",
+      "generic": "خطایی رخ داد. لطفاً دوباره تلاش کنید."
+    }
+  },
+  "dashboard": {
+    "loading": "در حال بارگذاری داشبورد…",
+    "title": "داشبورد کاربر",
+    "subtitle": "نمای کلی نشست mock",
+    "authMethod": "روش ورود",
+    "userInfo": "اطلاعات کاربر",
+    "status": "وضعیت",
+    "active": "فعال",
+    "logout": "خروج از حساب"
   }
 }

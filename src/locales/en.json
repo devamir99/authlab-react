@@ -106,5 +106,48 @@
       "back": "Back to providers",
       "phaseNote": "Full OAuth mock screen — Phase 4"
     }
+  },
+  "emailForm": {
+    "loginTitle": "Sign In to Account",
+    "registerTitle": "Create New Account",
+    "loginSubtitle": "or {{link}}",
+    "registerSubtitle": "or {{link}}",
+    "createAccount": "create new account",
+    "signInExisting": "sign in to existing account",
+    "email": "Email",
+    "password": "Password",
+    "name": "Full Name",
+    "confirmPassword": "Confirm Password",
+    "rememberMe": "Remember me",
+    "submitLogin": "Sign In",
+    "submitRegister": "Sign Up",
+    "backHome": "Back to Home",
+    "demoHint": "Demo account: demo@authlab.dev / 123456",
+    "registerSuccess": "Account created successfully! Redirecting…",
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email format",
+      "passwordRequired": "Password is required",
+      "passwordMin": "Password must be at least 6 characters",
+      "nameRequired": "Name is required",
+      "nameMin": "Name must be at least 2 characters",
+      "confirmRequired": "Password confirmation is required",
+      "passwordMismatch": "Password and confirmation must match"
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password",
+      "emailExists": "This email is already registered",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "dashboard": {
+    "loading": "Loading dashboard…",
+    "title": "User Dashboard",
+    "subtitle": "Mock session overview",
+    "authMethod": "Sign-in method",
+    "userInfo": "User Information",
+    "status": "Status",
+    "active": "Active",
+    "logout": "Logout from Account"
   }
 }
