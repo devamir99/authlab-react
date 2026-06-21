@@ -103,7 +103,7 @@ npm run lint     # ESLint
 | **1** ✅ | Theme (dark/light), i18n, layout, Navbar, Footer |
 | **2** ✅ | Home + Auth Hub |
 | **3** ✅ | Email login & register (mock) |
-| **4** | Social OAuth screens (mock) |
+| **4** ✅ | Social OAuth screens (mock) |
 | **5** | Phone OTP flow (mock) |
 | **6** | Magic link flow (mock) |
 | **7** | Dashboard polish + deploy |
