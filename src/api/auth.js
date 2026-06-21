@@ -1,3 +1,7 @@
+/**
+ * @deprecated Legacy mock API (json-server). Will be replaced with client-side
+ * mock flows in Phase 3+. No backend is required for this project.
+ */
 import axios from "axios";
 
 // Base URL for our mock API
