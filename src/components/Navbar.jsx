@@ -21,17 +21,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16 gap-4">
           <div className="flex items-center gap-3 min-w-0">
-            <Link to="/" className="text-xl font-bold text-app hover:text-primary transition-colors truncate">
-              {site.name}
-            </Link>
             <a
               href={site.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline text-xs text-app-muted hover:text-primary transition-colors truncate"
+              className="text-xl font-bold text-app hover:text-primary transition-colors truncate"
             >
               {site.brand}
             </a>
+            <Link
+              to="/"
+              className="hidden sm:inline text-xs text-app-muted hover:text-primary transition-colors truncate"
+            >
+              {site.name}
+            </Link>
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">

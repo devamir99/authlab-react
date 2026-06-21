@@ -4,10 +4,30 @@
 [![Author](https://img.shields.io/badge/Author-DevAmir-blue?style=flat-square)](https://github.com/devamir99)
 [![CI](https://img.shields.io/github/actions/workflow/status/devamir99/authlab-react/ci.yml?branch=main&label=CI)](https://github.com/devamir99/authlab-react/actions)
 
-**Auth Experience Lab** — a bilingual (EN/FA) mock authentication UI showcase built with React.  
+**Auth, Login & Sign Up Demo** — a bilingual (EN/FA) mock authentication UI showcase built with React.  
 Explore email, social OAuth, SMS OTP, and passwordless flows — **no backend, demonstration only**.
 
 > Built by [Amir Fallahi (DevAmir)](https://devamir.com) as a portfolio piece.
+
+## Screenshots
+
+### Home — Light (EN) & Dark (FA)
+
+| Light mode (English) | Dark mode (Persian / RTL) |
+|---|---|
+| ![Home — light English](docs/screenshots/home-light-en.png) | ![Home — dark Persian](docs/screenshots/home-dark-fa.png) |
+
+### Auth Hub & Email Login
+
+| Auth Hub (dark) | Email sign-in |
+|---|---|
+| ![Auth Hub](docs/screenshots/auth-hub-dark-en.png) | ![Email login](docs/screenshots/email-login-en.png) |
+
+### Phone OTP & Social OAuth
+
+| SMS OTP verification (FA) | Social providers (FA) |
+|---|---|
+| ![Phone OTP](docs/screenshots/phone-otp-fa.png) | ![Social hub](docs/screenshots/social-hub-dark-fa.png) |
 
 ## Live Demo
 
@@ -36,7 +56,7 @@ Authentication UIs often cram every sign-in method onto one page — OAuth butto
 | **Social** | Branded OAuth consent cards (Google, GitHub, Apple, Microsoft) |
 | **Phone** | 2-step OTP wizard + resend countdown |
 | **Magic Link** | Email → inbox → simulate click |
-| **UX** | Toast, stepper, breadcrumbs, 404 |
+| **UX** | Toast, stepper, breadcrumbs, SVG icons, 404 |
 
 ### Outcome
 A **defensible portfolio demo** — shows UI/UX thinking and React architecture without shipping a copy-paste production auth backend.
