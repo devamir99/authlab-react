@@ -87,9 +87,7 @@
       "desc": "Two-step phone verification with one-time code.",
       "providers": "Enter phone · Verify OTP",
       "pageTitle": "Phone Verification",
-      "pageSubtitle": "Enter your mobile number to receive a mock OTP code.",
-      "comingPhase": "Full OTP wizard coming in Phase 5.",
-      "startFlow": "Start Phone Flow"
+      "pageSubtitle": "Enter your mobile number to receive a mock OTP code."
     },
     "magicLink": {
       "title": "Magic Link",
@@ -178,5 +176,36 @@
     "status": "Status",
     "active": "Active",
     "logout": "Logout from Account"
+  },
+  "phoneOtp": {
+    "steps": {
+      "enter": "Enter phone",
+      "verify": "Verify code"
+    },
+    "enterTitle": "Enter your phone number",
+    "enterSubtitle": "We'll send a one-time verification code via SMS (mock).",
+    "verifyTitle": "Enter verification code",
+    "verifySubtitle": "Code sent to",
+    "countryCode": "Country code",
+    "phoneNumber": "Phone number",
+    "sendCode": "Send verification code",
+    "demoHint": "Mock SMS — no real message is sent",
+    "otpHint": "Demo code: {{code}}",
+    "verifying": "Verifying…",
+    "resend": "Resend code",
+    "resending": "Sending…",
+    "resendIn": "Resend in {{seconds}}s",
+    "changeNumber": "Change phone number",
+    "validation": {
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Enter a valid phone number (10+ digits)",
+      "otpIncomplete": "Enter the full 6-digit code"
+    },
+    "errors": {
+      "invalidOtp": "Invalid verification code",
+      "otpExpired": "Code expired — request a new one",
+      "sessionExpired": "Session expired — enter your phone again",
+      "generic": "Something went wrong. Please try again."
+    }
   }
 }

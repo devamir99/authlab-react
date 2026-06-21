@@ -87,9 +87,7 @@
       "desc": "تأیید دو مرحله‌ای با کد یکبار مصرف.",
       "providers": "شماره موبایل · تأیید OTP",
       "pageTitle": "تأیید موبایل",
-      "pageSubtitle": "شماره موبایل خود را برای دریافت کد mock وارد کنید.",
-      "comingPhase": "ویزارد کامل OTP در فاز ۵.",
-      "startFlow": "شروع جریان پیامک"
+      "pageSubtitle": "شماره موبایل خود را برای دریافت کد mock وارد کنید."
     },
     "magicLink": {
       "title": "لینک جادویی",
@@ -178,5 +176,36 @@
     "status": "وضعیت",
     "active": "فعال",
     "logout": "خروج از حساب"
+  },
+  "phoneOtp": {
+    "steps": {
+      "enter": "شماره موبایل",
+      "verify": "تأیید کد"
+    },
+    "enterTitle": "شماره موبایل خود را وارد کنید",
+    "enterSubtitle": "یک کد تأیید یکبار مصرف (mock) برای شما ارسال می‌شود.",
+    "verifyTitle": "کد تأیید را وارد کنید",
+    "verifySubtitle": "کد ارسال‌شده به",
+    "countryCode": "کد کشور",
+    "phoneNumber": "شماره موبایل",
+    "sendCode": "ارسال کد تأیید",
+    "demoHint": "پیامک mock — هیچ پیام واقعی ارسال نمی‌شود",
+    "otpHint": "کد demo: {{code}}",
+    "verifying": "در حال تأیید…",
+    "resend": "ارسال مجدد کد",
+    "resending": "در حال ارسال…",
+    "resendIn": "ارسال مجدد تا {{seconds}} ثانیه",
+    "changeNumber": "تغییر شماره موبایل",
+    "validation": {
+      "phoneRequired": "شماره موبایل الزامی است",
+      "phoneInvalid": "شماره معتبر وارد کنید (حداقل ۱۰ رقم)",
+      "otpIncomplete": "کد ۶ رقمی را کامل وارد کنید"
+    },
+    "errors": {
+      "invalidOtp": "کد تأیید اشتباه است",
+      "otpExpired": "کد منقضی شده — کد جدید بگیرید",
+      "sessionExpired": "نشست منقضی شده — دوباره شماره را وارد کنید",
+      "generic": "خطایی رخ داد. لطفاً دوباره تلاش کنید."
+    }
   }
 }
