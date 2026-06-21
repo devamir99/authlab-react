@@ -42,7 +42,8 @@ const SocialProvider = () => {
       login(
         { id: provider, name: name, email: `demo@${provider}.com` },
         `mock_social_${provider}_${Date.now()}`,
-        true
+        true,
+        'social'
       );
       navigate('/dashboard');
     }, 1800);
