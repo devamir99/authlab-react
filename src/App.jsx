@@ -16,6 +16,8 @@ import SocialProvider from './pages/auth/social/SocialProvider';
 import PhoneEntry from './pages/auth/phone/PhoneEntry';
 import PhoneVerify from './pages/auth/phone/PhoneVerify';
 import MagicLinkEntry from './pages/auth/magic-link/MagicLinkEntry';
+import MagicLinkSent from './pages/auth/magic-link/MagicLinkSent';
+import MagicLinkVerify from './pages/auth/magic-link/MagicLinkVerify';
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
                 <Route path="/auth/phone" element={<PhoneEntry />} />
                 <Route path="/auth/phone/verify" element={<PhoneVerify />} />
                 <Route path="/auth/magic-link" element={<MagicLinkEntry />} />
+                <Route path="/auth/magic-link/sent" element={<MagicLinkSent />} />
+                <Route path="/auth/magic-link/verify/:token" element={<MagicLinkVerify />} />
 
                 <Route path="/login" element={<Navigate to="/auth/email/login" replace />} />
                 <Route path="/register" element={<Navigate to="/auth/email/register" replace />} />
