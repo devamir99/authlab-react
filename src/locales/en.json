@@ -1,8 +1,38 @@
 {
   "meta": {
-    "title": "AuthLab — Mock Auth UI"
+    "title": "AuthLab — Mock Auth UI | DevAmir"
   },
   "demo": {
     "banner": "Demo only — no real authentication"
+  },
+  "nav": {
+    "home": "Home",
+    "authHub": "Auth Flows",
+    "dashboard": "Dashboard",
+    "login": "Sign In",
+    "register": "Sign Up",
+    "logout": "Logout",
+    "portfolio": "Portfolio",
+    "github": "GitHub",
+    "welcome": "Welcome, {{name}}"
+  },
+  "footer": {
+    "builtBy": "Built by",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "tagline": "Mock authentication UI showcase"
+  },
+  "theme": {
+    "light": "Switch to light mode",
+    "dark": "Switch to dark mode"
+  },
+  "lang": {
+    "switchToEn": "Switch to English",
+    "switchToFa": "Switch to Persian",
+    "en": "EN",
+    "fa": "FA"
+  },
+  "auth": {
+    "checking": "Verifying session..."
   }
 }

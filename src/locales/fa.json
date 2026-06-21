@@ -1,8 +1,38 @@
 {
   "meta": {
-    "title": "AuthLab — رابط mock ورود"
+    "title": "AuthLab — رابط mock ورود | DevAmir"
   },
   "demo": {
     "banner": "فقط نمایشی — احراز هویت واقعی انجام نمی‌شود"
+  },
+  "nav": {
+    "home": "خانه",
+    "authHub": "جریان‌های ورود",
+    "dashboard": "داشبورد",
+    "login": "ورود",
+    "register": "ثبت‌نام",
+    "logout": "خروج",
+    "portfolio": "نمونه‌کارها",
+    "github": "گیت‌هاب",
+    "welcome": "خوش آمدید، {{name}}"
+  },
+  "footer": {
+    "builtBy": "ساخته‌شده توسط",
+    "contact": "تماس",
+    "rights": "تمامی حقوق محفوظ است.",
+    "tagline": "نمایش رابط کاربری mock احراز هویت"
+  },
+  "theme": {
+    "light": "تغییر به حالت روشن",
+    "dark": "تغییر به حالت تاریک"
+  },
+  "lang": {
+    "switchToEn": "تغییر به انگلیسی",
+    "switchToFa": "تغییر به فارسی",
+    "en": "EN",
+    "fa": "FA"
+  },
+  "auth": {
+    "checking": "در حال بررسی نشست..."
   }
 }
