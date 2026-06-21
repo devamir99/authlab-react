@@ -156,7 +156,7 @@ const Dashboard = () => {
       >
         <p className="text-sm text-app mb-3">{t('dashboard.portfolioPitch')}</p>
         <a
-          href={site.url}
+          href={site.contactPage}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex px-6 py-2.5 rounded-lg btn-primary text-sm font-semibold transition-colors"

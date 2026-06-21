@@ -50,7 +50,7 @@ const Home = () => {
                   {t('home.exploreCta')}
                 </Link>
                 <a
-                  href={site.url}
+                  href={site.projects}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 rounded-lg border border-[var(--color-border)] text-app hover:border-[var(--color-border-strong)] font-semibold transition-colors"

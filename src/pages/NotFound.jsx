@@ -23,7 +23,7 @@ const NotFound = () => {
             {t('nav.authHub')}
           </Link>
           <a
-            href={site.url}
+            href={site.projects}
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-lg text-sm text-app-muted hover:text-primary transition-colors"
