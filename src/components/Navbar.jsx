@@ -77,13 +77,19 @@ const Navbar = () => {
             ) : (
               <>
                 <Link
-                  to="/login"
+                  to="/auth"
+                  className="hidden sm:inline text-sm text-app-muted hover:text-primary px-2 py-1 transition-colors"
+                >
+                  {t('nav.authHub')}
+                </Link>
+                <Link
+                  to="/auth/email/login"
                   className="text-sm text-app-muted hover:text-primary px-2 py-1 transition-colors"
                 >
                   {t('nav.login')}
                 </Link>
                 <Link
-                  to="/register"
+                  to="/auth/email/register"
                   className="text-sm px-3 py-1.5 rounded-lg btn-primary font-medium transition-colors"
                 >
                   {t('nav.register')}
