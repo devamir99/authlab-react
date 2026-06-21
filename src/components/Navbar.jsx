@@ -36,7 +36,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <a
-              href={site.url}
+              href={site.projects}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline text-sm text-app-muted hover:text-primary px-2 py-1 transition-colors"

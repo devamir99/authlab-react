@@ -33,7 +33,7 @@ const Footer = () => {
             </p>
           </div>
           <a
-            href={site.url}
+            href={site.contactPage}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg btn-primary text-sm font-semibold transition-colors shrink-0"
