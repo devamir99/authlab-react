@@ -64,7 +64,7 @@ const PhoneVerify = () => {
     if (result.success) {
       login(result.user, result.token, true, 'phone');
       clearPhoneSession();
-      navigate('/dashboard');
+      navigate('/dashboard', { state: { welcome: true } });
     } else {
       setError(t(result.messageKey ?? 'phoneOtp.errors.generic'));
     }

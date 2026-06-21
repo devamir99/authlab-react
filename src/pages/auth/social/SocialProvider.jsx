@@ -36,7 +36,7 @@ const SocialProvider = () => {
         true,
         'social'
       );
-      navigate('/dashboard');
+      navigate('/dashboard', { state: { welcome: true } });
     }, REDIRECT_DELAY_MS);
   };
 
