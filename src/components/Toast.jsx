@@ -1,64 +1,64 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-const Toast = ({ message, type = 'info', onClose, duration = 5000 }) => {
-  useEffect(() => {
-    if (duration > 0) {
-      const timer = setTimeout(() => {
-        onClose();
-      }, duration);
-
-      return () => clearTimeout(timer);
-    }
-  }, [duration, onClose]);
-
-  const getToastStyles = () => {
-    switch (type) {
-      case 'success':
-        return 'bg-green-50 border-green-200 text-green-800';
-      case 'error':
-        return 'bg-red-50 border-red-200 text-red-800';
-      case 'warning':
-        return 'bg-yellow-50 border-yellow-200 text-yellow-800';
-      default:
-        return 'bg-blue-50 border-blue-200 text-blue-800';
-    }
+const Toast = ({ message, type = 'info', onClose, position = 'right' }) => {
+  const styles = {
+    success: {
+      bg: 'var(--color-primary-soft)',
+      border: 'var(--color-primary)',
+      text: 'var(--color-primary)',
+    },
+    error: {
+      bg: 'var(--color-danger-bg)',
+      border: 'var(--color-danger)',
+      text: 'var(--color-danger)',
+    },
+    warning: {
+      bg: 'var(--color-primary-soft)',
+      border: 'var(--color-primary)',
+      text: 'var(--color-text)',
+    },
+    info: {
+      bg: 'var(--color-surface)',
+      border: 'var(--color-border-strong)',
+      text: 'var(--color-text)',
+    },
   };
 
-  const getIcon = () => {
-    switch (type) {
-      case 'success':
-        return '✅';
-      case 'error':
-        return '❌';
-      case 'warning':
-        return '⚠️';
-      default:
-        return 'ℹ️';
-    }
-  };
+  const icons = { success: '✓', error: '✕', warning: '⚠', info: 'ℹ' };
+  const style = styles[type] ?? styles.info;
+  const horizontal = position === 'left' ? 'left-4' : 'right-4';
 
   return (
-    <div className={`
-      fixed top-4 right-4 z-50 max-w-sm w-full
-      border rounded-lg shadow-lg p-4
-      ${getToastStyles()}
-      transform transition-all duration-300 ease-in-out
-    `}>
-      <div className="flex items-start">
-        <div className="flex-shrink-0">
-          <span className="text-lg">{getIcon()}</span>
-        </div>
-        <div className="mr-3 flex-1">
-          <p className="text-sm font-medium">{message}</p>
-        </div>
-        <div className="flex-shrink-0">
+    <div
+      role="alert"
+      aria-live="polite"
+      className={`fixed top-20 ${horizontal} z-[100] max-w-sm w-[calc(100%-2rem)]`}
+    >
+      <div
+        className="rounded-xl border shadow-lg p-4 backdrop-blur-lg"
+        style={{
+          background: style.bg,
+          borderColor: style.border,
+          color: style.text,
+        }}
+      >
+        <div className="flex items-start gap-3">
+          <span className="font-bold text-base shrink-0" aria-hidden>
+            {icons[type]}
+          </span>
+          <p className="text-sm font-medium flex-1 leading-relaxed">{message}</p>
           <button
+            type="button"
             onClick={onClose}
-            className="inline-flex text-gray-400 hover:text-gray-600 focus:outline-none focus:text-gray-600 transition ease-in-out duration-150"
+            className="shrink-0 opacity-60 hover:opacity-100 transition-opacity"
+            aria-label="Close"
           >
-            <span className="sr-only">بستن</span>
-            <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+            <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fillRule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
             </svg>
           </button>
         </div>
