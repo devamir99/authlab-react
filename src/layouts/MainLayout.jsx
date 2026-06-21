@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import DemoBanner from '../components/DemoBanner';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ToastContainer from '../components/ToastContainer';
 
 const MainLayout = () => {
   return (
@@ -13,6 +14,7 @@ const MainLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <ToastContainer />
     </div>
   );
 };

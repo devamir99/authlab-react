@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
 import { AuthProvider } from './context/AuthContext';
+import { ToastProvider } from './context/ToastContext';
 import MainLayout from './layouts/MainLayout';
 import ProtectedRoute from './routes/ProtectedRoute';
 import Home from './pages/Home';
@@ -18,13 +19,15 @@ import PhoneVerify from './pages/auth/phone/PhoneVerify';
 import MagicLinkEntry from './pages/auth/magic-link/MagicLinkEntry';
 import MagicLinkSent from './pages/auth/magic-link/MagicLinkSent';
 import MagicLinkVerify from './pages/auth/magic-link/MagicLinkVerify';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
         <AuthProvider>
-          <Router>
+          <ToastProvider>
+            <Router>
             <Routes>
               <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />
@@ -52,9 +55,11 @@ function App() {
                     </ProtectedRoute>
                   }
                 />
+                <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
           </Router>
+          </ToastProvider>
         </AuthProvider>
       </LanguageProvider>
     </ThemeProvider>
