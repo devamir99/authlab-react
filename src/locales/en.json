@@ -34,5 +34,77 @@
   },
   "auth": {
     "checking": "Verifying session..."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "authHub": "Auth Hub",
+    "email": "Email",
+    "social": "Social",
+    "phone": "Phone OTP",
+    "magicLink": "Magic Link",
+    "login": "Sign In",
+    "register": "Sign Up"
+  },
+  "home": {
+    "heroTitle": "Auth Experience Lab",
+    "heroSubtitle": "Explore bilingual mock sign-in flows — email, social, SMS, and passwordless. No backend, UI showcase only.",
+    "exploreCta": "Explore Auth Flows",
+    "portfolioCta": "View Portfolio",
+    "githubCta": "View on GitHub",
+    "welcomeBack": "Welcome back, {{name}}",
+    "goDashboard": "Go to Dashboard",
+    "flowsTitle": "Available Flows",
+    "flowsSubtitle": "Each method has its own dedicated screens — no cluttered all-in-one forms.",
+    "techTitle": "Built With",
+    "feature1Title": "Isolated Flows",
+    "feature1Desc": "Separate screens per auth method for a clean, focused UX.",
+    "feature2Title": "Bilingual + RTL",
+    "feature2Desc": "English and Persian with full right-to-left support.",
+    "feature3Title": "Dark & Light",
+    "feature3Desc": "Orange-accent theme with system-aware dark and light modes."
+  },
+  "authHub": {
+    "title": "Choose Sign-In Method",
+    "subtitle": "Pick a flow to explore. All interactions are simulated on the client.",
+    "mockBadge": "Mock",
+    "explore": "Explore flow",
+    "social": {
+      "title": "Social Sign-In",
+      "desc": "OAuth-style screens for Google, GitHub, Apple, and Microsoft.",
+      "providers": "Google · GitHub · Apple · Microsoft",
+      "pageTitle": "Social Providers",
+      "pageSubtitle": "Select a provider to view its mock OAuth screen."
+    },
+    "email": {
+      "title": "Email & Password",
+      "desc": "Classic login and registration with form validation.",
+      "providers": "Sign In · Sign Up",
+      "pageTitle": "Email Authentication",
+      "pageSubtitle": "Choose login or create a new account."
+    },
+    "phone": {
+      "title": "Phone / SMS OTP",
+      "desc": "Two-step phone verification with one-time code.",
+      "providers": "Enter phone · Verify OTP",
+      "pageTitle": "Phone Verification",
+      "pageSubtitle": "Enter your mobile number to receive a mock OTP code.",
+      "comingPhase": "Full OTP wizard coming in Phase 5.",
+      "startFlow": "Start Phone Flow"
+    },
+    "magicLink": {
+      "title": "Magic Link",
+      "desc": "Passwordless sign-in via email link.",
+      "providers": "Enter email · Check inbox",
+      "pageTitle": "Passwordless Email",
+      "pageSubtitle": "Receive a mock magic link — no password required.",
+      "comingPhase": "Full magic link flow coming in Phase 6.",
+      "startFlow": "Start Magic Link Flow"
+    },
+    "providerStub": {
+      "redirecting": "Simulating redirect to {{provider}}…",
+      "continue": "Continue with {{provider}}",
+      "back": "Back to providers",
+      "phaseNote": "Full OAuth mock screen — Phase 4"
+    }
   }
 }

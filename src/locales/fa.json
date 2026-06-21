@@ -34,5 +34,77 @@
   },
   "auth": {
     "checking": "در حال بررسی نشست..."
+  },
+  "breadcrumb": {
+    "home": "خانه",
+    "authHub": "مرکز ورود",
+    "email": "ایمیل",
+    "social": "شبکه اجتماعی",
+    "phone": "پیامک OTP",
+    "magicLink": "لینک جادویی",
+    "login": "ورود",
+    "register": "ثبت‌نام"
+  },
+  "home": {
+    "heroTitle": "آزمایشگاه تجربه ورود",
+    "heroSubtitle": "جریان‌های mock دو زبانه — ایمیل، شبکه اجتماعی، پیامک و ورود بدون رمز. بدون backend، فقط نمایش UI.",
+    "exploreCta": "کاوش جریان‌های ورود",
+    "portfolioCta": "مشاهده نمونه‌کارها",
+    "githubCta": "مشاهده در گیت‌هاب",
+    "welcomeBack": "خوش برگشتی، {{name}}",
+    "goDashboard": "رفتن به داشبورد",
+    "flowsTitle": "جریان‌های موجود",
+    "flowsSubtitle": "هر روش صفحه اختصاصی خودش را دارد — بدون فرم شلوغ همه‌کاره.",
+    "techTitle": "ساخته‌شده با",
+    "feature1Title": "جریان‌های جدا",
+    "feature1Desc": "صفحه مجزا برای هر روش ورود — UX تمیز و متمرکز.",
+    "feature2Title": "دو زبانه + RTL",
+    "feature2Desc": "انگلیسی و فارسی با پشتیبانی کامل راست‌به‌چپ.",
+    "feature3Title": "دارک و لایت",
+    "feature3Desc": "تم نارنجی با حالت تاریک و روشن."
+  },
+  "authHub": {
+    "title": "روش ورود را انتخاب کنید",
+    "subtitle": "یک جریان را برای کاوش انتخاب کنید. همه تعاملات روی کلاینت شبیه‌سازی می‌شوند.",
+    "mockBadge": "Mock",
+    "explore": "کاوش جریان",
+    "social": {
+      "title": "ورود اجتماعی",
+      "desc": "صفحات OAuth برای Google، GitHub، Apple و Microsoft.",
+      "providers": "Google · GitHub · Apple · Microsoft",
+      "pageTitle": "ارائه‌دهندگان اجتماعی",
+      "pageSubtitle": "یک ارائه‌دهنده را برای مشاهده صفحه mock OAuth انتخاب کنید."
+    },
+    "email": {
+      "title": "ایمیل و رمز عبور",
+      "desc": "ورود و ثبت‌نام کلاسیک با اعتبارسنجی فرم.",
+      "providers": "ورود · ثبت‌نام",
+      "pageTitle": "احراز هویت ایمیل",
+      "pageSubtitle": "ورود یا ایجاد حساب جدید."
+    },
+    "phone": {
+      "title": "پیامک / OTP",
+      "desc": "تأیید دو مرحله‌ای با کد یکبار مصرف.",
+      "providers": "شماره موبایل · تأیید OTP",
+      "pageTitle": "تأیید موبایل",
+      "pageSubtitle": "شماره موبایل خود را برای دریافت کد mock وارد کنید.",
+      "comingPhase": "ویزارد کامل OTP در فاز ۵.",
+      "startFlow": "شروع جریان پیامک"
+    },
+    "magicLink": {
+      "title": "لینک جادویی",
+      "desc": "ورود بدون رمز از طریق لینک ایمیل.",
+      "providers": "ایمیل · بررسی صندوق",
+      "pageTitle": "ایمیل بدون رمز",
+      "pageSubtitle": "دریافت لینک mock — بدون نیاز به رمز عبور.",
+      "comingPhase": "جریان کامل لینک جادویی در فاز ۶.",
+      "startFlow": "شروع جریان لینک جادویی"
+    },
+    "providerStub": {
+      "redirecting": "شبیه‌سازی انتقال به {{provider}}…",
+      "continue": "ادامه با {{provider}}",
+      "back": "بازگشت به ارائه‌دهندگان",
+      "phaseNote": "صفحه mock OAuth کامل — فاز ۴"
+    }
   }
 }
