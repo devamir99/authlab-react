@@ -10,18 +10,15 @@ const FormInput = ({
   error,
   placeholder,
   required = false,
-  className = ''
+  className = '',
 }) => {
   return (
     <div className={`mb-4 ${className}`}>
-      <label 
-        htmlFor={name}
-        className="block text-sm font-medium text-gray-200 mb-2"
-      >
+      <label htmlFor={name} className="block text-sm font-medium text-app mb-2">
         {label}
-        {required && <span className="text-red-400 ml-1">*</span>}
+        {required && <span className="text-[var(--color-danger)] ms-1">*</span>}
       </label>
-      
+
       <input
         type={type}
         id={name}
@@ -31,15 +28,15 @@ const FormInput = ({
         onBlur={onBlur}
         placeholder={placeholder}
         className={`
-          w-full px-3 py-2 bg-white/10 backdrop-blur-sm border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white placeholder-gray-400
-          ${error ? 'border-red-500/50' : 'border-white/20'}
+          w-full px-3 py-2.5 surface rounded-lg backdrop-blur-sm
+          focus:outline-none focus:ring-2 ring-primary text-app
+          placeholder:text-app-muted/60 transition-colors
+          ${error ? 'border-[var(--color-danger)]' : 'border-[var(--color-border)]'}
         `}
       />
-      
+
       {error && (
-        <p className="mt-1 text-sm text-red-300">
-          {error}
-        </p>
+        <p className="mt-1.5 text-sm text-[var(--color-danger)]">{error}</p>
       )}
     </div>
   );
