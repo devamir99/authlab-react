@@ -70,7 +70,7 @@ const MagicLinkSent = () => {
     if (result.success) {
       login(result.user, result.token, true, 'magic-link');
       clearMagicSession();
-      navigate('/dashboard');
+      navigate('/dashboard', { state: { welcome: true } });
     } else {
       setError(t(result.messageKey ?? 'magicLink.errors.generic'));
     }

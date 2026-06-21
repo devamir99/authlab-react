@@ -24,7 +24,7 @@ const MagicLinkVerify = () => {
       if (result.success) {
         login(result.user, result.token, true, 'magic-link');
         clearMagicSession();
-        navigate('/dashboard', { replace: true });
+        navigate('/dashboard', { replace: true, state: { welcome: true } });
       } else {
         setError(t(result.messageKey ?? 'magicLink.errors.generic'));
       }
