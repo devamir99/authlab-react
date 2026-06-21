@@ -41,7 +41,7 @@ const Register = () => {
         setSuccess(t(result.messageKey));
         setTimeout(() => {
           login(result.user, result.token, true, 'email');
-          navigate('/dashboard');
+          navigate('/dashboard', { state: { welcome: true } });
         }, 1500);
       } else {
         setError(t(result.messageKey ?? 'emailForm.errors.generic'));

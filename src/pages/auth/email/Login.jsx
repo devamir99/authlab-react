@@ -38,7 +38,7 @@ const Login = () => {
 
       if (result.success) {
         login(result.user, result.token, values.rememberMe, 'email');
-        navigate(from, { replace: true });
+        navigate(from, { replace: true, state: { welcome: true } });
       } else {
         setError(t(result.messageKey ?? 'emailForm.errors.generic'));
       }
