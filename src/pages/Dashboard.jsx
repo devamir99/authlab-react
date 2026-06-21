@@ -15,8 +15,13 @@ const Dashboard = () => {
   const { user, authMethod, logout } = useAuth();
   const { t, locale } = useLanguage();
 
-  const methodLabel =
-    methodLabels[authMethod]?.[locale] ?? authMethod ?? '—';
+  const methodLabel = (() => {
+    if (authMethod === 'social' && user?.socialProvider) {
+      const name = t(`socialOAuth.providers.${user.socialProvider}`);
+      return locale === 'fa' ? `${name} (OAuth)` : `${name} OAuth`;
+    }
+    return methodLabels[authMethod]?.[locale] ?? authMethod ?? '—';
+  })();
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
