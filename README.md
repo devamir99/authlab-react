@@ -2,11 +2,48 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-devamir.com-orange?style=flat-square)](https://devamir.com/en/projects)
 [![Author](https://img.shields.io/badge/Author-DevAmir-blue?style=flat-square)](https://github.com/devamir99)
+[![CI](https://img.shields.io/github/actions/workflow/status/devamir99/authlab-react/ci.yml?branch=main&label=CI)](https://github.com/devamir99/authlab-react/actions)
 
 **Auth Experience Lab** — a bilingual (EN/FA) mock authentication UI showcase built with React.  
 Explore email, social OAuth, SMS OTP, and passwordless flows — **no backend, demonstration only**.
 
-> Built by [Amir (DevAmir)](https://devamir.com) as a portfolio piece.
+> Built by [Amir Fallahi (DevAmir)](https://devamir.com) as a portfolio piece.
+
+## Live Demo
+
+> Deploy to Vercel/Netlify, then set `liveDemo` in `src/config/site.js` and update this line.
+
+**Local:** `npm run dev` → [http://localhost:5173](http://localhost:5173)
+
+## Case Study (Portfolio Summary)
+
+### Problem
+Authentication UIs often cram every sign-in method onto one page — OAuth buttons, email forms, phone OTP — creating a cluttered experience that's hard to demo and harder to maintain.
+
+### Approach
+**AuthLab** treats each method as an isolated flow:
+- **Auth Hub** → pick a method
+- Dedicated screens per provider / channel
+- Client-side mock only — safe for public GitHub, no credentials in repo
+
+### Highlights
+| Area | Implementation |
+|------|----------------|
+| **i18n** | English + Persian with RTL |
+| **Typography** | Yekan Bakh FaNum for Persian (`public/fonts/`) |
+| **Theme** | Dark / light with orange accent |
+| **Email** | Formik + Yup, mock session |
+| **Social** | Branded OAuth consent cards (Google, GitHub, Apple, Microsoft) |
+| **Phone** | 2-step OTP wizard + resend countdown |
+| **Magic Link** | Email → inbox → simulate click |
+| **UX** | Toast, stepper, breadcrumbs, 404 |
+
+### Outcome
+A **defensible portfolio demo** — shows UI/UX thinking and React architecture without shipping a copy-paste production auth backend.
+
+**Featured on:** [devamir.com/en/projects](https://devamir.com/en/projects)
+
+---
 
 ## Author — Amir (DevAmir)
 
@@ -21,28 +58,9 @@ Explore email, social OAuth, SMS OTP, and passwordless flows — **no backend, d
 | **Telegram** | [t.me/devamir99](https://t.me/devamir99) |
 | **Phone** | [09205007494](tel:+989205007494) |
 
-Interested in custom auth UI or full-stack work? **[Request consultation →](https://devamir.com/en/contact)**
+---
 
-## Features
-
-- **Auth Hub** — choose sign-in method without cluttered single-page forms
-- **Email** — login & register with client-side mock validation
-- **Social** — branded OAuth consent screens (Google, GitHub, Apple, Microsoft)
-- **Phone** — SMS OTP two-step wizard with resend countdown
-- **Magic Link** — passwordless email flow with simulate-click
-- **Bilingual** — English & Persian with full RTL support
-- **Theming** — dark / light mode with orange accent
-- **Toast notifications** — welcome & logout feedback
-- **Protected dashboard** — mock session overview + portfolio CTA
-
-## Tech Stack
-
-- React 19 · Vite · React Router
-- Tailwind CSS 4
-- Formik + Yup (forms)
-- Context API (state, theme, i18n, toast)
-
-## Setup
+## Quick Start
 
 ```bash
 git clone https://github.com/devamir99/authlab-react.git
@@ -51,43 +69,38 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+## Demo Flows
 
-> **No API server required.** All authentication is simulated on the client.
+| Flow | Route | Demo hint |
+|------|--------|-----------|
+| Email | `/auth/email/login` | `demo@authlab.dev` / `123456` |
+| Social | `/auth/social` → provider | Click Authorize |
+| Phone | `/auth/phone` | OTP `123456` |
+| Magic Link | `/auth/magic-link` | Simulate click |
 
 ## Deploy
-
-Ready for static hosting (Vercel, Netlify, GitHub Pages):
 
 ```bash
 npm run build
 ```
 
-**Vercel:** connect repo — `vercel.json` included for SPA routing.
+- **Vercel:** `vercel.json` included (SPA rewrites)
+- **CI:** GitHub Actions runs lint + build on push
 
-**Preview locally:**
-
-```bash
-npm run preview
-```
+After deploy, update `site.liveDemo` in `src/config/site.js`.
 
 ## Scripts
 
 ```bash
-npm run dev      # Development server
+npm run dev      # Development
 npm run build    # Production build
-npm run preview  # Preview production build
+npm run preview  # Preview build
 npm run lint     # ESLint
 ```
 
-## Demo flows
+## Tech Stack
 
-| Flow | Route |
-|------|--------|
-| Email login | `/auth/email/login` — demo@authlab.dev / 123456 |
-| Social OAuth | `/auth/social` → pick provider |
-| Phone OTP | `/auth/phone` → code **123456** |
-| Magic link | `/auth/magic-link` → simulate click |
+React 19 · Vite · React Router · Tailwind CSS 4 · Formik · Yup · Context API
 
 ## License
 
@@ -95,4 +108,4 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-**Note:** UI showcase only — not for production auth without a real backend.
+**Note:** UI showcase only — not for production without a real backend.
