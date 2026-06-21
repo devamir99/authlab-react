@@ -1,3 +1,5 @@
+export { socialProviders } from './socialProviders.js';
+
 export const authFlowCategories = [
   {
     id: 'social',
@@ -31,13 +33,6 @@ export const authFlowCategories = [
     descKey: 'authHub.magicLink.desc',
     providersKey: 'authHub.magicLink.providers',
   },
-];
-
-export const socialProviders = [
-  { id: 'google', icon: 'G', color: '#4285F4', route: '/auth/social/google' },
-  { id: 'github', icon: '⌘', color: '#24292f', route: '/auth/social/github' },
-  { id: 'apple', icon: '', color: '#000000', route: '/auth/social/apple' },
-  { id: 'microsoft', icon: '⊞', color: '#0078D4', route: '/auth/social/microsoft' },
 ];
 
 export const techStack = [
