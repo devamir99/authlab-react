@@ -8,8 +8,8 @@ export const site = {
   author: 'Amir',
 
   tagline: {
-    en: 'Auth Experience Lab — Mock UI Showcase',
-    fa: 'آزمایشگاه تجربه ورود — نمایش رابط کاربری',
+    en: 'Auth, Login & Sign Up Demo — Mock UI Showcase',
+    fa: 'دمو احراز هویت و ورود و ثبت‌نام — نمایش رابط کاربری',
   },
 
   description: {
@@ -45,8 +45,8 @@ export const site = {
       fa: 'درخواست مشاوره',
     },
     explore: {
-      en: 'Explore Auth Flows',
-      fa: 'کاوش جریان‌های ورود',
+      en: 'View Demos',
+      fa: 'مشاهده دموها',
     },
   },
 };
