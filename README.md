@@ -105,7 +105,7 @@ npm run lint     # ESLint
 | **3** ✅ | Email login & register (mock) |
 | **4** ✅ | Social OAuth screens (mock) |
 | **5** ✅ | Phone OTP flow (mock) |
-| **6** | Magic link flow (mock) |
+| **6** ✅ | Magic link flow (mock) |
 | **7** | Dashboard polish + deploy |
 | **8** | README GIF, live demo, case study |
 
