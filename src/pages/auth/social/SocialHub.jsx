@@ -1,15 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../../context/LanguageContext';
-import { socialProviders } from '../../../config/authFlows';
+import { socialProviders } from '../../../config/socialProviders';
 import Breadcrumb from '../../../components/Breadcrumb';
-
-const providerNames = {
-  google: 'Google',
-  github: 'GitHub',
-  apple: 'Apple',
-  microsoft: 'Microsoft',
-};
+import SocialProviderIcon from '../../../components/social/SocialProviderIcon';
 
 const SocialHub = () => {
   const { t } = useLanguage();
@@ -40,16 +34,20 @@ const SocialHub = () => {
               className="group flex items-center gap-4 surface rounded-xl p-4 backdrop-blur-lg transition-all hover:border-[var(--color-border-strong)]"
             >
               <span
-                className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm shrink-0"
-                style={{ backgroundColor: provider.color }}
+                className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 border border-[var(--color-border)] bg-white"
                 aria-hidden
               >
-                {provider.icon || providerNames[provider.id]?.charAt(0)}
+                <SocialProviderIcon provider={provider.id} />
               </span>
-              <span className="font-semibold text-app group-hover:text-primary transition-colors flex-1">
-                {providerNames[provider.id]}
-              </span>
-              <span className="text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full bg-[var(--color-primary-soft)] text-primary">
+              <div className="flex-1 min-w-0">
+                <span className="font-semibold text-app group-hover:text-primary transition-colors block">
+                  {t(`socialOAuth.providers.${provider.id}`)}
+                </span>
+                <span className="text-xs text-app-muted">
+                  {t(`socialOAuth.hubDesc.${provider.id}`)}
+                </span>
+              </div>
+              <span className="text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full bg-[var(--color-primary-soft)] text-primary shrink-0">
                 {t('authHub.mockBadge')}
               </span>
             </Link>
