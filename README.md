@@ -1,7 +1,7 @@
 # AuthLab React
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-devamir.com-orange?style=flat-square)](https://devamir.com)
-[![Author](https://img.shields.io/badge/Author-DevAmir-blue?style=flat-square)](https://github.com/devamirr)
+[![Portfolio](https://img.shields.io/badge/Portfolio-devamir.com-orange?style=flat-square)](https://devamir.com/en/projects)
+[![Author](https://img.shields.io/badge/Author-DevAmir-blue?style=flat-square)](https://github.com/devamir99)
 
 **Auth Experience Lab** — a bilingual (EN/FA) mock authentication UI showcase built with React.  
 Explore email, social OAuth, SMS OTP, and passwordless flows — **no backend, demonstration only**.
@@ -12,14 +12,16 @@ Explore email, social OAuth, SMS OTP, and passwordless flows — **no backend, d
 
 | | |
 |---|---|
-| **Website** | [devamir.com](https://devamir.com) |
+| **Projects** | [devamir.com/en/projects](https://devamir.com/en/projects) |
+| **Consultation** | [devamir.com/en/contact](https://devamir.com/en/contact) |
 | **Email** | [devamir99@gmail.com](mailto:devamir99@gmail.com) |
-| **GitHub** | [github.com/devamirr](https://github.com/devamirr) |
-| **LinkedIn** | [linkedin.com/in/devamir](https://linkedin.com/in/devamir) |
+| **GitHub** | [github.com/devamir99](https://github.com/devamir99) |
+| **LinkedIn** | [linkedin.com/in/devamir](https://www.linkedin.com/in/devamir/) |
+| **Instagram** | [instagram.com/devamirr](https://www.instagram.com/devamirr) |
 | **Telegram** | [t.me/devamir99](https://t.me/devamir99) |
 | **Phone** | [09205007494](tel:+989205007494) |
 
-Interested in custom auth UI or full-stack work? **[Get in touch →](https://devamir.com)**
+Interested in custom auth UI or full-stack work? **[Request consultation →](https://devamir.com/en/contact)**
 
 ## Features
 

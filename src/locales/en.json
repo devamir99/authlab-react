@@ -12,7 +12,7 @@
     "login": "Sign In",
     "register": "Sign Up",
     "logout": "Logout",
-    "portfolio": "Portfolio",
+    "portfolio": "Projects",
     "github": "GitHub",
     "welcome": "Welcome, {{name}}"
   },
@@ -49,7 +49,7 @@
     "heroTitle": "Auth Experience Lab",
     "heroSubtitle": "Explore bilingual mock sign-in flows — email, social, SMS, and passwordless. No backend, UI showcase only.",
     "exploreCta": "Explore Auth Flows",
-    "portfolioCta": "View Portfolio",
+    "portfolioCta": "View Projects",
     "githubCta": "View on GitHub",
     "welcomeBack": "Welcome back, {{name}}",
     "goDashboard": "Go to Dashboard",
@@ -177,7 +177,7 @@
     "status": "Status",
     "active": "Active",
     "exploreFlows": "Try other flows",
-    "portfolioPitch": "Like this UI? See more work or get in touch for your next project.",
+    "portfolioPitch": "Like this UI? View more projects or request a consultation.",
     "backHome": "Back to Home",
     "logout": "Logout from Account"
   },
