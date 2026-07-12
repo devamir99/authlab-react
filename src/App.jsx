@@ -21,13 +21,15 @@ import MagicLinkSent from './pages/auth/magic-link/MagicLinkSent';
 import MagicLinkVerify from './pages/auth/magic-link/MagicLinkVerify';
 import NotFound from './pages/NotFound';
 
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
         <AuthProvider>
           <ToastProvider>
-            <Router>
+            <Router basename={routerBasename || undefined}>
             <Routes>
               <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />

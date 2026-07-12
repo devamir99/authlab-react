@@ -32,8 +32,8 @@ export const site = {
 
   repo: 'https://github.com/devamir99/authlab-react',
 
-  /** Set after deploying to Vercel/Netlify */
-  liveDemo: '',
+  /** GitHub Pages live demo */
+  liveDemo: 'https://devamir99.github.io/authlab-react/',
 
   cta: {
     portfolio: {

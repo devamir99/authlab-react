@@ -31,7 +31,7 @@ Explore email, social OAuth, SMS OTP, and passwordless flows — **no backend, d
 
 ## Live Demo
 
-> Deploy to Vercel/Netlify, then set `liveDemo` in `src/config/site.js` and update this line.
+**GitHub Pages:** [devamir99.github.io/authlab-react](https://devamir99.github.io/authlab-react/)
 
 **Local:** `npm run dev` → [http://localhost:5173](http://localhost:5173)
 
@@ -104,10 +104,9 @@ npm run dev
 npm run build
 ```
 
+- **GitHub Pages:** push to `main` — workflow `Deploy to GitHub Pages` builds and publishes `dist/`
 - **Vercel:** `vercel.json` included (SPA rewrites)
 - **CI:** GitHub Actions runs lint + build on push
-
-After deploy, update `site.liveDemo` in `src/config/site.js`.
 
 ## Scripts
 

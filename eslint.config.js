@@ -27,6 +27,12 @@ export default defineConfig([
     },
   },
   {
+    files: ['vite.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  {
     files: ['src/context/**/*.{js,jsx}', 'src/components/icons/index.jsx'],
     rules: {
       'react-refresh/only-export-components': 'off',
